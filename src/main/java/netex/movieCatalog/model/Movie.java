@@ -1,5 +1,7 @@
 package netex.movieCatalog.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -10,10 +12,15 @@ public class Movie implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @JsonProperty("Title")
     private String title;
+    @JsonProperty("Year")
     private String releaseyear;
+    @JsonProperty("imdbID")
     private String imdbid;
+    @JsonProperty("Type")
     private String type;
+    @JsonProperty("Poster")
     private String poster;
 
     public Integer getId() {

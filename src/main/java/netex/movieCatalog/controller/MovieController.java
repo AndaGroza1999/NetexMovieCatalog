@@ -1,6 +1,5 @@
 package netex.movieCatalog.controller;
 
-
 import netex.movieCatalog.model.Movie;
 import netex.movieCatalog.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,18 +13,17 @@ public class MovieController {
     @Autowired
     private MovieService movieService;
 
+
     //POST
     @PostMapping("/addMovie")
     public Movie addMovie(@RequestBody Movie movie) {
         return movieService.saveMovie(movie);
     }
 
-
     @PostMapping("/addMoviesList")
     public List<Movie> addMovies(@RequestBody List<Movie> movies) {
         return movieService.saveAllMovies(movies);
     }
-
 
     //GET
     @GetMapping("/movies")
@@ -37,11 +35,6 @@ public class MovieController {
     public Movie getMovie(@PathVariable int id) {
         return movieService.getMoviebyId(id);
     }
-
-//    @GetMapping("/movies/{title}")
-//    public Movie getMovieByTitle(@PathVariable String title) {
-//        return movieService.getMovieByTitle(title);
-//    }
 
 
     //PUT
@@ -56,4 +49,13 @@ public class MovieController {
     public String deleteMovie(@PathVariable int id) {
         return movieService.deleteMovie(id);
     }
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    @PostMapping("/postMovies")
+    public List<Movie> addALLMovies() {
+        return movieService.postMovies("death");
+    }
+
+
 }
