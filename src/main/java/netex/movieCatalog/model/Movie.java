@@ -1,17 +1,43 @@
 package netex.movieCatalog.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+<<<<<<< HEAD
+import org.apache.solr.client.solrj.beans.Field;
+=======
+>>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "movie_tabel")
+@Table(name = "moviestabel")
 public class Movie implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Field
     private Integer id;
+<<<<<<< HEAD
+
+    @JsonProperty("Title")
+    @Field
+    private String title;
+
+    @JsonProperty("Year")
+    @Field
+    private String releaseyear;
+
+    @JsonProperty("imdbID")
+    @Field
+    private String imdbid;
+
+    @JsonProperty("Type")
+    @Field
+    private String type;
+
+    @JsonProperty("Poster")
+    @Field
+=======
     @JsonProperty("Title")
     private String title;
     @JsonProperty("Year")
@@ -21,6 +47,7 @@ public class Movie implements Serializable {
     @JsonProperty("Type")
     private String type;
     @JsonProperty("Poster")
+>>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
     private String poster;
 
     public Integer getId() {

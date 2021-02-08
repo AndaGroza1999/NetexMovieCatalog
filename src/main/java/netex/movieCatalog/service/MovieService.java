@@ -2,12 +2,23 @@ package netex.movieCatalog.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
+<<<<<<< HEAD
+import com.querydsl.jpa.impl.JPAQueryFactory;
+=======
+>>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
 import netex.movieCatalog.MyConfiguration;
 import netex.movieCatalog.model.Movie;
+import netex.movieCatalog.model.QMovie;
 import netex.movieCatalog.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+=======
+>>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -21,7 +32,12 @@ public class MovieService {
     @Autowired
     private MovieRepository movieRepository;
 
+<<<<<<< HEAD
+    @Autowired
+    private RequestService requestService;
+=======
     private final RequestService requestService;
+>>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
 
     @Autowired
     private MyConfiguration prop;
@@ -84,6 +100,17 @@ public class MovieService {
                 if (jsonN.get("Response").asText().equalsIgnoreCase("true") && jsonN.get("Search").isArray()) {
                     for (JsonNode j : jsonN.get("Search")) {
                         Movie m = new Movie();
+<<<<<<< HEAD
+                        if(j.get("Type").equals("movies")) {
+                            m.setId(m.getId());
+                            m.setTitle(j.get("Title").asText());
+                            m.setReleaseYear(j.get("Year").asText());
+                            m.setImdbid(j.get("imdbID").asText());
+                            m.setType(j.get("Type").asText());
+                            m.setPoster(j.get("Poster").asText());
+                            movies.add(m);
+                        }
+=======
                         m.setId(m.getId());
                         m.setTitle(j.get("Title").asText());
                         m.setReleaseYear(j.get("Year").asText());
@@ -91,6 +118,7 @@ public class MovieService {
                         m.setType(j.get("Type").asText());
                         m.setPoster(j.get("Poster").asText());
                         movies.add(m);
+>>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
                     }
                 }
 
@@ -101,4 +129,18 @@ public class MovieService {
         return saveAllMovies(movies);
     }
 
+<<<<<<< HEAD
+    public JPAQueryFactory getQueryFactory() {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("moviestabel");
+        EntityManager em = emf.createEntityManager();
+        return new JPAQueryFactory(em);
+    }
+
+    public List<Movie> getMovieList() {
+        return getQueryFactory().selectFrom(QMovie.movie).fetch();
+    }
+
+
+=======
+>>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
 }

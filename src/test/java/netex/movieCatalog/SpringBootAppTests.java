@@ -1,13 +1,13 @@
-package netex.movieCatalog;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class SpringBootAppTests {
-
-	@Test
-	void contextLoads() {
-	}
-
-}
+//package netex.movieCatalog;
+//
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class SpringBootAppTests {
+//
+//	@Test
+//	void contextLoads() {
+//	}
+//
+//}
