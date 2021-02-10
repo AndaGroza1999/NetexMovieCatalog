@@ -33,15 +33,6 @@ public class Movie implements Serializable {
 
     @JsonProperty("Poster")
     @Field
-    @JsonProperty("Title")
-    private String title;
-    @JsonProperty("Year")
-    private String releaseyear;
-    @JsonProperty("imdbID")
-    private String imdbid;
-    @JsonProperty("Type")
-    private String type;
-    @JsonProperty("Poster")
     private String poster;
 
     public Integer getId() {
