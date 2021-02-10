@@ -10,10 +10,5 @@ public class SpringBootApp {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootApp.class, args);
-    }
-<<<<<<< HEAD
-=======
-
->>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
+    }  
 }
-
