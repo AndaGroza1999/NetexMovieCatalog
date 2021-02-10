@@ -19,10 +19,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<jackson.version>2.12.1</jackson.version>
-<<<<<<< HEAD
 		<querydsl.version>4.4.0</querydsl.version>
-=======
->>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
 	</properties>
 
 	<dependencies>
@@ -48,8 +45,6 @@
 		</dependency>
 
 		<dependency>
-<<<<<<< HEAD
-=======
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
@@ -57,7 +52,6 @@
 		</dependency>
 
 		<dependency>
->>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
 			<groupId>org.mariadb.jdbc</groupId>
 			<artifactId>mariadb-java-client</artifactId>
 			<scope>runtime</scope>
@@ -75,32 +69,26 @@
 			<version>2.4.2</version>
 		</dependency>
 
-<<<<<<< HEAD
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
-=======
-
+		</dependency>	
+			
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
 			<version>${jackson.version}</version>
->>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
 		</dependency>
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-<<<<<<< HEAD
-=======
 			<version>${jackson.version}</version>
->>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
 		</dependency>
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
-<<<<<<< HEAD
 		</dependency>
 
 		<dependency>
@@ -112,19 +100,13 @@
 		<dependency>
 			<groupId>com.querydsl</groupId>
 			<artifactId>querydsl-jpa</artifactId>
-=======
 			<version>${jackson.version}</version>
->>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
 		</dependency>
 
 	</dependencies>
 
 	<build>
 		<plugins>
-<<<<<<< HEAD
-
-=======
->>>>>>> 50acadc755c72cd33ac06df1858c19dddb377682
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
